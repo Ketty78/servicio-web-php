@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+}
+
+.respuesta-container{
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+}
+
+.respuesta-card{
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    background: white;
+
+    box-shadow:
+    0px 15px 40px rgba(0,0,0,0.4);
+
+    animation: aparecer 0.8s ease;
+}
+
+/* MENSAJE EXITOSO */
+
+.success{
+
+    border-top: 8px solid #22c55e;
+}
+
+/* MENSAJE ERROR */
+
+.error{
+
+    border-top: 8px solid #ef4444;
+}
+
+.respuesta-card h1{
+
+    margin-bottom: 20px;
+
+    color: #1e293b;
+
+    font-size: 35px;
+}
+
+.respuesta-card p{
+
+    font-size: 18px;
+
+    color: #475569;
+
+    margin-bottom: 30px;
+
+    line-height: 1.6;
+}
+
+.respuesta-card a{
+
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.respuesta-card a:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:
+    0px 8px 20px rgba(37,99,235,0.4);
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(-40px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+.contenedor{
+
+    width: 95%;
+    max-width: 1200px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow:
+    0px 15px 40px rgba(0,0,0,0.4);
+}
+
+
+
+.panel{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: white;
+
+    padding: 80px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.panel h1{
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.panel p{
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+
+.formulario{
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ===================================
+   TARJETAS
+=================================== */
+
+.card{
+
+    background: #f8fafc;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+    0px 5px 15px rgba(0,0,0,0.08);
+}
+
+
+
+.card h2{
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    color: #1e293b;
+}
+
+
+.card input{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 15px;
+
+    border: 2px solid #cbd5e1;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.card input:focus{
+
+    border-color: #2563eb;
+
+    outline: none;
+
+    box-shadow:
+    0px 0px 10px rgba(37,99,235,0.3);
+}
+
+/* ===================================
+   BOTONES
+=================================== */
+
+.card button{
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card button:hover{
+
+    transform: translateY(-3px);
+
+    box-shadow:
+    0px 8px 20px rgba(37,99,235,0.4);
+}
+
+
+
+@media(max-width:900px){
+
+    .contenedor{
+
+        grid-template-columns: 1fr;
+    }
+
+    .panel{
+
+        text-align: center;
+    }
+
+}
